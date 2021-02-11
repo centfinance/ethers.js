@@ -21,6 +21,9 @@ exports.IpcProvider = ipc_provider_1.IpcProvider;
 var infura_provider_1 = require("./infura-provider");
 exports.InfuraProvider = infura_provider_1.InfuraProvider;
 exports.InfuraWebSocketProvider = infura_provider_1.InfuraWebSocketProvider;
+var quiknode_provider_1 = require("./quiknode-provider");
+exports.QuiknodeProvider = quiknode_provider_1.QuiknodeProvider;
+exports.QuiknodeWebSocketProvider = quiknode_provider_1.QuiknodeWebSocketProvider;
 var json_rpc_provider_1 = require("./json-rpc-provider");
 exports.JsonRpcProvider = json_rpc_provider_1.JsonRpcProvider;
 exports.JsonRpcSigner = json_rpc_provider_1.JsonRpcSigner;
@@ -78,6 +81,7 @@ function getDefaultProvider(network, options) {
         CloudflareProvider: cloudflare_provider_1.CloudflareProvider,
         EtherscanProvider: etherscan_provider_1.EtherscanProvider,
         InfuraProvider: infura_provider_1.InfuraProvider,
+        QuiknodeProvider: quiknode_provider_1.QuiknodeProvider,
         JsonRpcProvider: json_rpc_provider_1.JsonRpcProvider,
         NodesmithProvider: nodesmith_provider_1.NodesmithProvider,
         PocketProvider: pocket_provider_1.PocketProvider,

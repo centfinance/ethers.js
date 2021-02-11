@@ -24,6 +24,7 @@ import { EtherscanProvider } from "./etherscan-provider";
 import { FallbackProvider } from "./fallback-provider";
 import { IpcProvider } from "./ipc-provider";
 import { InfuraProvider, InfuraWebSocketProvider } from "./infura-provider";
+import { QuiknodeProvider, QuiknodeWebSocketProvider } from "./quiknode-provider";
 import { JsonRpcProvider, JsonRpcSigner } from "./json-rpc-provider";
 import { NodesmithProvider } from "./nodesmith-provider";
 import { PocketProvider } from "./pocket-provider";
@@ -77,6 +78,7 @@ function getDefaultProvider(network?: Network | string, options?: any): BaseProv
         CloudflareProvider,
         EtherscanProvider,
         InfuraProvider,
+        QuiknodeProvider,
         JsonRpcProvider,
         NodesmithProvider,
         PocketProvider,
@@ -109,7 +111,9 @@ export {
     CloudflareProvider,
     EtherscanProvider,
     InfuraProvider,
+    QuiknodeProvider,
     InfuraWebSocketProvider,
+    QuiknodeWebSocketProvider,
     JsonRpcProvider,
     NodesmithProvider,
     PocketProvider,

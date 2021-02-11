@@ -19,6 +19,12 @@ function ethDefaultProvider(network) {
             }
             catch (error) { }
         }
+        if (providers.QuiknodeProvider) {
+            try {
+                providerList.push(new providers.QuiknodeProvider(network, options.quiknode));
+            }
+            catch (error) { }
+        }
         if (providers.EtherscanProvider) {
             try {
                 providerList.push(new providers.EtherscanProvider(network, options.etherscan));
@@ -121,6 +127,11 @@ var networks = {
         ensAddress: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
         name: "goerli",
         _defaultProvider: ethDefaultProvider("goerli")
+    },
+    xdai: {
+        chainId: 100,
+        name: "xdai",
+        _defaultProvider: ethDefaultProvider("xdai")
     },
     // ETC (See: #351)
     classic: {

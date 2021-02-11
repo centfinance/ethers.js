@@ -32,6 +32,12 @@ function ethDefaultProvider(network: string | Network): Renetworkable {
             } catch(error) { }
         }
 
+        if (providers.QuiknodeProvider) {
+            try {
+                providerList.push(new providers.QuiknodeProvider(network, options.quiknode));
+            } catch (error) { }
+        }
+
         if (providers.EtherscanProvider) {
             try {
                 providerList.push(new providers.EtherscanProvider(network, options.etherscan));
@@ -151,7 +157,12 @@ const networks: { [name: string]: Network } = {
         _defaultProvider: ethDefaultProvider("goerli")
      },
 
-
+     xdai: {
+        chainId: 100,
+        name: "xdai",
+        _defaultProvider: ethDefaultProvider("xdai")
+    },
+    
     // ETC (See: #351)
     classic: {
         chainId: 61,
